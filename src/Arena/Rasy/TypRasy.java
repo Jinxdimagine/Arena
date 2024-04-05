@@ -1,3 +1,5 @@
+package Arena.Rasy;
+
 public interface TypRasy {
     double bonusSila(double sila);
     double bonusInteligence(double inteligence);

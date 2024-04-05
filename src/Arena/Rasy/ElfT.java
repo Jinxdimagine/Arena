@@ -1,26 +1,24 @@
-package Rasy;
+package Arena.Rasy;
 
-public class Clovek implements TypRasy {
-
+public class ElfT implements TypRasy {
 
     @Override
     public double bonusSila(double sila) {
-        return sila*0.03;
+        return 0;
     }
 
     @Override
     public double bonusInteligence(double inteligence) {
-        return inteligence*0.03;
+        return inteligence*0.4;
     }
 
     @Override
     public double bonusObratnost(double obratnost) {
-        return obratnost*0.04;
+        return obratnost*0.6;
     }
 
     @Override
     public double bonusOdolnost(double odolnost) {
         return 0;
     }
-
 }

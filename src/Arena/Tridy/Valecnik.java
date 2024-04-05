@@ -1,3 +1,5 @@
+package Arena.Tridy;
+
 public class Valecnik extends Postava {
 
     public Valecnik(String jmeno) {

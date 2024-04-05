@@ -1,4 +1,4 @@
-package Tridy;
+package Arena.Tridy;
 
 public class Mag extends Postava {
     public Mag(String jmeno) {

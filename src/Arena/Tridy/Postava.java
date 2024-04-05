@@ -1,13 +1,16 @@
+package Arena.Tridy;
+import Arena.Rasy.TypRasy;
+
 public class Postava {
     private String jmeno;
-    private double level;
+    private int level;
     private double sila;
     private double intelegenci;
     private double obratnost;
     private double odolnost;
-    private double points;
-    private double zivoty;
-    private double zkusenosti;
+    private int points;
+    private int zivoty;
+    private int zkusenosti;
     private Trida trida;
     private TypRasy typRasy;
     public Postava(String jmeno) {
@@ -20,6 +23,15 @@ public class Postava {
         setPoints(5);
         setZivoty(getLevel());
     }
+    public void update(){
+        setLevel(getLevel());
+        setSila(getSila());
+        setIntelegenci(getIntelegenci());
+        setObratnost(getObratnost());
+        setOdolnost(getOdolnost());
+        setPoints(getPoints());
+        setZivoty(getLevel());
+    }
 
     public String getJmeno() {
         return jmeno;
@@ -29,11 +41,11 @@ public class Postava {
         this.jmeno = jmeno;
     }
 
-    public double getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(double level) {
+    public void setLevel(int level) {
         this.level = level;
     }
 
@@ -44,6 +56,7 @@ public class Postava {
     public void setSila(double sila) {
         if (typRasy!=null){
             this.sila = sila+typRasy.bonusSila(sila);
+
         }else {
             this.sila = sila;
         }
@@ -89,11 +102,11 @@ public class Postava {
 
     }
 
-    public double getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints(double points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 
@@ -101,7 +114,7 @@ public class Postava {
         return zivoty;
     }
 
-    public void setZivoty(double level) {
+    public void setZivoty(int level) {
         this.zivoty = level*100;
     }
 
@@ -109,7 +122,7 @@ public class Postava {
         return zkusenosti;
     }
 
-    public void setZkusenosti(double zkusenosti) {
+    public void setZkusenosti(int zkusenosti) {
         this.zkusenosti = zkusenosti;
     }
 
@@ -126,6 +139,7 @@ public class Postava {
     }
 
     public void setTypRasy(TypRasy typRasy) {
+
         this.typRasy = typRasy;
     }
 
@@ -144,4 +158,5 @@ public class Postava {
                 ", trida=" + trida +
                 '}';
     }
+
 }
